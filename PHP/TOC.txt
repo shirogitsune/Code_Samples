@@ -1,0 +1,20 @@
+The files contained within this zip file are samples of some custom code work
+that I have done that did not involve another framework.
+
+dexplorer-2.0.php : This is the second itereation of a utility script I had written for my own purposes to allow for the visual display of files on my server at home
+
+class.rentalcalendar.php : This was part of a defunct project to provide a graphical calendar for a rental property management company's internal processes.
+
+Image Manipulation : A folder containing four utility scripts for maipulating images 
+using the built in GD library.
+
+v1 : Contains example code of class files written for various company projects. These
+were chosen for not being client/application specific.
+
+v2 : Revised or adapted versions of classes from v1 that either use newer methods afforded
+with newer versions of PHP ot different methods.
+
+Additionally, code for other languages may be provided upon request.
+
+Justin Pearce
+whitefox@guardianfox.net
