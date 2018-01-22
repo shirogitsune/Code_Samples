@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<!--
+ UI TEMPLATE
+ This HTML file provides the base page framework for the UI interface to operate on.
+ The main page area provides a field for the Javascript to manipulate the page and change 
+ the display of the UI controls.
+
+ The Templates and Views areas provide the HTML parts for the UI Javascript to copy and
+ manipulate to remove as much HTML from the Javascript as possible. This way, changes
+ to the HTML can be made here as opposed to the Javascript files (views or controllers).
+ @author Justin Pearce <jpearce@eastbay.com>
+-->
+	<head>
+		<title>Loading...</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- This meta tag is here Because 'Use Compatibility View on Intranet Sites' is ridiculous. :( -->
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script src="js/jquery-2.1.3.min.js" type="text/javascript">/* The jQuery! */</script>
+	</head>
+	<body>
+		<!-- START Main Page Area -->
+		<div id="processing" style="display: hidden;"><div class="loadingbox"><div class="loader"></div><div class="loadingmsg">Processing...</div></div></div>
+		<header>
+			<h1 id="pageheading" class="pageheading">
+				<!-- Page heading / title -->
+			</h1>
+			<div id="breadcrumbs">
+				<!-- Breadcrumbs go here -->
+			</div>
+			<div id="search" class="searchcontainer">
+				<!-- Search controls go here -->
+			</div>
+		</header>
+		<div id="content_area">
+			<!-- Page content goes here -->
+		</div>
+		<footer>
+			<a href="index.html" id="returnHome">Home</a><!-- Page footer? Page Footer.-->
+		</footer>
+		<!-- END Main Page Area -->
+		<!-- START HTML template repository -->
+		<div id="templates" style="display: none;">
+			<!-- List Item Template -->
+			<div class="container list_view_item" data-id="">	
+				<span class="name list_item_name" title="Name"></span>
+				<span class="dataType list_item_type" title="Data Type"></span>
+				<span class="ordinal list_item_ordinal" title="Ordinal"></span>
+				<span class="value list_item_value" title="Value"></span>
+				<span class="Controls list_item_controls">
+					<button name="edit" value="edit" >Edit</button><button name="delete" value="delete" >Inactivate</button><span class="order"><img height="auto" width="auto" src="img/arrow-down-up.svg"/></span>
+				</span>
+			</div>
+			<!-- Assertion List Item Template -->
+			<div class="container assertion_list_view_item">		
+				<span class="Name list_item_name" title="Name"></span>
+				<span class="Value list_item_value" title="Value"></span>
+				<span class="Controls list_item_controls">
+					<span><span class="toggle"><input type="checkbox" id="" name="trim" value="1" checked /><label for=""></label></span> Trim Value?</span>
+					<button name="delete" value="delete" >Delete</button>
+				</span>
+			</div>
+			<!-- Template for complex object key/value pairs -->
+			<div class="container object_view_item key_value_pair">
+				<span class="Key"></span>
+				<span class="Value"></span>
+			</div>
+			<!-- Template for Bread Crumbs separator -->
+			<span class="separator"><!-- Separator! --></span>			
+		</div>
+		<!-- END HTML template repository -->
+		<!-- START HTML view repository -->
+		<div id="views" style="display: none;">
+			<!-- View Template for List Views -->
+			<section class="view container list_view">
+				<div class="section_heading">
+					<div class="section_name"></div>
+					<div class="section_controls"><button name="add" value="Add">Add</button></div>
+				</div>
+				<div class="section_container"></div>
+			</section>
+			<!-- View Template for Method Configuration -->
+			<section class="view container method_config_view" data-id="">
+				<div class="section_heading">
+					<span class="method_name">
+						<input type="text" name="name" placeholder="Method Name"/>
+					</span>
+					<span class="method_controls">
+						<button name="save" value="Save">Save</button>
+						<button name="add" value="Add">Add Parameter</button>
+					</span>
+				</div>
+				<div class="section_content">
+					<div class="columns">
+						<span class="name">Name</span>
+						<span class="datatype">Type</span>
+						<span class="ordinal">Ord</span>
+						<span class="controls"></span>
+					</div>
+					<div class="rows">
+					</div>
+				</div>
+			</section>
+			<!-- View Template for Sample Configuration -->
+			<section class="view container sample_config_view" data-id="">
+				<div class="section_heading">
+					<span class="sample_name">
+						<input type="text" name="name" placeholder="Sample Name"/>
+					</span>
+					<span class="sample_controls">
+						<button name="save" value="Save">Save</button>
+					</span>
+				</div>
+				<div class="section_content">
+					<div class="parameters">
+						<div class="columns">
+							<span class="name">Parameter</span>
+							<span class="type">Type</span>
+							<span class="ord" style="display: none;"></span>
+							<span class="value">Value</span>
+							<span class="controls"></span>
+						</div>
+						<div class="rows">
+						</div>
+					</div>
+					<div class="assertions" data-id="">
+						<div class="heading">
+							<span class="header">Assertions: </span>
+						</div>
+						<div class="columns">
+							<span class="name">Name</span>
+							<span class="value">Value</span>
+							<span class="controls">
+								<button name="add" value="Add">Add</button>
+							</span>
+						</div>
+						<div class="rows">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- View for editing complex data types -->
+			<div class="container object_view">
+				<div class="fields">
+				</div>
+				<div class="Controls">
+					<button name="save" value="">Save</button>
+				</div>
+			</div>
+			<!-- View for BreadCrumbs -->
+			<div class="container breadcrumbs"></div>
+		</div>
+		<!-- END HTML view repository -->
+		
+		<!-- START Javascript for UI operations -->
+		<!--<script src="js/mockAjax.js" type="text/javascript">/* Mock Data Provider */</script>-->
+		<script src="js/models.js" type="text/javascript">/* Data Models */</script>
+		<script src="js/views.js" type="text/javascript">/* UI Views */</script>
+		<script src="js/controllers.js" type="text/javascript">/* Controllers and Utilities */</script>
+		<!-- END Javascript for UI operations -->
+	</body>
+</html>

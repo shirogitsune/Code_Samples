@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title ng-bind="title"></title>
+        <!-- Bootstrap -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="assets/js/jquery.latest.js"></script>
+        <script type="text/javascript" src="assets/js/d3.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img class="logo" src="assets/img/logo.jpg" />
+                </div>
+                <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/incidentcalendar">Incident Calendar</a></li>
+                <li class="active"><a href="/incidentsbyhour">Incidents By Hour</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Incident By Hour Heatmap</h1>
+        <div id="app">
+            <div id="chart"></div>
+            <div id="dataset-picker">
+            </div>
+        </div>
+        <script type="text/javascript" src="assets/js/incidentsbyhour.js"></script>
+    </body>
+</html>

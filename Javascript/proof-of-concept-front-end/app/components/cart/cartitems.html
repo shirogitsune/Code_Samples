@@ -1,0 +1,34 @@
+<div>
+<header>
+</header>
+<section ng-init="getCart()">
+    <h1>Shopping Cart</h1>
+    <div class="cart-items" ng-show="cart.items.length">
+        <div class="cart-item header">
+                <span class="col first"></span>
+                <span class="col">Item</span>
+                <span class="col">Size</span>
+                <span class="col">Quantity</span>
+                <span class="col">Price</span>
+                <span class="col last"></span>
+        </div>
+        <div ng-repeat="item in cart.items" class="cart-item">
+            <span class="col product_image first"><img ng-src="http://images.footlocker.com/pi/{{item.product_id}}/small" ng-show="item.product_id" 
+             err-src="assets/img/nope.gif"/></span>
+            <span class="col product_name">{{item.productname}}</span>
+            <span class="col product_size">{{item.size}}</span>
+            <span class="col product_quantity">{{item.quantity}}</span>
+            <span class="col product_price">{{item.price|currency}}</span>
+            <span class="col last"><a href="javascript:void(0);" ng-click="removeItem(item.linenumber);" id="cart_remove_item_{{item.linenumber}}">Remove</a></span>
+        </div>
+        <div class="cart-subtotal" ng-show="cart.items.length" id="cart_subtotal"><span>Subtotal:</span> {{cart.subtotal|currency}}</div>
+    </div>        
+    <div id="order" class="placeorder" ng-show="cart.items.length">
+            <button class="btn btn-primary" ng-click="checkout();" id="cart_checkout_button">Checkout</button>
+    </div>
+    <div ng-show="!cart.items.length" id="cart_empty_message">
+        <p>Your cart is empty.</p>
+    </div>
+</section>
+<footer></footer>
+</div>

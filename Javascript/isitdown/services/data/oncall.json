@@ -1,0 +1,456 @@
+{
+	"na":{
+		"milwaukee":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"minneapolis":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"wausau":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"camphill":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"junctioncity":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"newyork":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"bradenton":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		},
+		"chicago":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"(223)456-7890"
+				}
+			}
+		}
+	},
+	"eu":{
+		"recklinghausen":{
+			"server":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				}
+			},
+			"service":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				}
+			},
+			"network":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				}
+			},
+			"firewall":{
+				"primary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				},
+				"secondary":{
+					"name":"John Doe",
+					"email":"jdoe@footlocker.com",
+					"phone":"+49 2361 90 796 187"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+<div ng-init="getProfile();">
+    <div class="profile-controls">
+        <button class="btn btn-primary" ng-show="!editMode" ng-click="toggleEditMode();" id="profile_edit_button">Edit Profile</button>
+        <button class="btn btn-primary" ng-show="editMode" ng-click="saveProfile();" id="profile_save_button">Save Changes</button>
+        <button class="btn" ng-show="editMode" ng-click="toggleEditMode();" id="profile_cancel_button">Cancel</button>
+    </div>
+    <section class="profile-display" ng-show="!editMode">
+        <div><strong>Name:</strong> {{userProfile.firstname}} {{userProfile.lastname}}</div>
+        <div><strong>Email:</strong> {{userProfile.email}}</div>
+        <div><strong>Preferences:</strong> {{userProfile.preferences.join(', ')}}</div>
+        <div>
+            <strong>Addresses:</strong>
+            <ul class="addresses">
+                <li class="address thumbnail" ng-repeat="address in userProfile.addresses" id="address_{{$index}}">
+                    <div class="type"><strong>{{address.type.toUpperCase();}}</strong></div>
+                    <div class="name">Name: {{address.name}}</div>
+                    <div class="line1">{{address.line1}}</div>
+                    <div class="line2" ng-show="address.line2">{{address.line2}}</div>
+                    <div class="line3">{{address.city}}, {{address.state}}  {{address.zipcode}}</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="profile-edit" ng-show="editMode">
+        <div><label>First Name:</label><input type="text" class="form-control" name="firstname" placeholder="First Name" ng-model-options="{updateOn:'blur'}" ng-model="editProfile.firstname" id="profile_firstname_field" /></div>
+        <div><label>Last Name: </label><input type="text" class="form-control" name="lastname" placeholder="Last Name" ng-model-options="{updateOn:'blur'}" ng-model="editProfile.lastname" id="profile_lastname_field"/></div>
+        <div><label>Email:</label><input type="email" class="form-control" name="email" placeholder="Email" ng-model-options="{updateOn:'blur'}" ng-model="editProfile.email" id="profile_email_field"/></div>
+        <div>
+            <label>Preferences:</label>
+            <div class="preferences">
+                <div class="preference" ng-repeat="pref in editProfile.preferences">
+                    <input type="text" id="profile_preference_{{$index}}" name="pref{{$index}}" class="form-control" placeholder="Preference" ng-model-options="{updateOn:'blur'}" ng-model="editProfile.preferences[$index]" />
+                    <button class="btn" ng-click="removePreference($index);" id="remove_preference_{{$index}}">X</button>
+                </div>
+                <div class="add-preference">
+                    <button class="btn btn-primary" ng-click="addPreference();" id="profile_add_preference">Add Preference</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label>Addresses:</label>
+            <ul class="addresses">
+                <li class="address thumbnail" ng-repeat="address in editProfile.addresses">
+                    <button class="btn" ng-click="removeAddress($index);" id="remove_address_{{$index}}">X</button>
+                    <div class="type">Type: <input type="radio" name="{{address.name|urlencode}}" value="billing" ng-model="address.type" id="billing_address_{{$index}}" /> Billing 
+                                            <input type="radio" name="{{address.name|urlencode}}" value="shipping" ng-model="address.type" id="shipping_address_{{$index}}" /> Shipping</div>
+                    <div class="name">Name: <input type="text" name="addressname" placeholder="Name" ng-model="address.name" id="address_name_{{$index}}" class="form-control" /></div>
+                    <div class="line1">Street 1: <input type="text" name="line1" placeholder="Street 1" ng-model="address.line1" id="address_line1_{{$index}}" class="form-control" /></div>
+                    <div class="line2">Street 2: <input type="text" name="line2" placeholder="Street 2" ng-model="address.line2" id="address_line2_{{$index}}" class="form-control" /></div>
+                    <div class="city">City: <input type="text" name="addressname" placeholder="City" ng-model="address.city" id="address_city_{{$index}}" class="form-control" /></div>
+                    <div class="state">State: <input type="text" name="addressname" placeholder="State" ng-model="address.state" id="address_state_{{$index}}" class="form-control" /></div>
+                    <div class="zipcode">Postal Code: <input type="text" name="addressname" placeholder="Postal Code" id="address_zipcode_{{$index}}" ng-model="address.zipcode" class="form-control" /></div>
+                </li>
+            </ul>
+            <div class="add-address">
+                <button class="btn btn-primary" ng-click="addAddress();" id="profile_add_address">Add Address</button>
+            </div>
+        </div>
+    </section>
+</div>

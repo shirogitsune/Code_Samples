@@ -1,0 +1,82 @@
+{
+    "milwaukee":{
+        "region":"na",
+        "loc":{"lat":"", "long":""},
+        "resources":[
+        {
+            "address": "firewall1.footlocker.net",
+            "type": "firewall",
+            "status": "green"
+        },
+        {
+            "address": "server1.footlocker.net",
+            "type": "server",
+            "status": "green"
+        },
+        {
+            "address": "server2.footlocker.net",
+            "type": "server",
+            "status": "yellow"
+        }
+    ]},
+    "wausau":{
+        "region":"na",
+        "loc":{"lat":"", "long":""},
+        "resources":[
+        {
+            "address": "firewall2.footlocker.net",
+            "type": "firewall",
+            "status": "green"
+        },
+        {
+            "address": "web1.footlocker.net",
+            "type": "server",
+            "status": "green"
+        },
+        {
+            "address": "web2.footlocker.net",
+            "type": "server",
+            "status": "green"
+        },
+        {
+            "address": "proxy1.footlocker.net",
+            "type": "server",
+            "status": "red"
+        }
+    ]},
+    "camphill":{
+        "region":"na",
+        "loc":{"lat":"", "long":""},
+        "resources":[
+        {
+            "address": "firewall3.footlocker.net",
+            "type": "firewall",
+            "status": "yellow"
+        },
+        {
+            "address": "inv1.footlocker.net",
+            "type": "server",
+            "status": "green"
+        },
+        {
+            "address": "inv2.footlocker.net",
+            "type": "server",
+            "status": "green"
+        }
+    ]},
+    "recklinghausen":{
+        "region":"eu",
+        "loc":{"lat":"", "long":""},
+        "resources":[
+        {
+            "address": "firewall1.footlocker.net",
+            "type": "firewall",
+            "status": "green"
+        },
+        {
+            "address": "nas1.footlocker.net",
+            "type": "server",
+            "status": "yellow"
+        }
+    ]}
+}

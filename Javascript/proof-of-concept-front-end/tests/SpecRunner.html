@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.4.1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+    
+  <!-- Jasmine Libraries -->
+  <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+  <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.4.1/boot.js"></script>
+  
+  <!-- Javascript Library Resources -->
+  <script src="lib/angular-1.5.0/angular.min.js"></script>
+  <script src="lib/angular-1.5.0/angular-route.min.js">/* Angular Route Provider */</script>
+  <script src="lib/angular-1.5.0/angular-mocks.js"></script>
+
+  <!-- Code Under Test -->
+    <!-- Application Main / Config -->
+    <script type="text/javascript" src="../app/app.js">/* Application */</script>
+	<script>
+		app.constant('endpoints', {
+			products: 'http://localhost:8080/products/{{productId}}',
+			search: 'http://localhost:8080/products/search/{{searchTerm}}',
+			cart: 'http://localhost:8080/users/{{userId}}/carts/{{cartId}}',
+			order: 'http://localhost:8080/users/{{userId}}/orders',
+			wishlist: 'http://localhost:8080/users/{{userId}}/wishlists/{{wishlistId}}',
+			profile: 'http://localhost:8080/users/{{userEmail}}/profile'
+		});
+	</script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="../app/components/search/search.js">/* Search Controller */</script>
+    <script type="text/javascript" src="../app/components/pdp/pdp.js">/* PDP Controller */</script>
+    <script type="text/javascript" src="../app/components/cart/cart.js">/* Cart Controller */</script>
+    <script type="text/javascript" src="../app/components/orders/orders.js">/* Order Controller */</script>
+    <script type="text/javascript" src="../app/components/wishlist/wishlist.js">/* Wishlist Controller */</script>
+    <script type="text/javascript" src="../app/components/profile/profile.js">/* Profile Controller */</script>
+    <!-- Directives -->
+    <script type="text/javascript" src="../app/shared/directives/errsrc.js">/* Image Error Directive */</script>
+    <script type="text/javascript" src="../app/shared/directives/searchform.js">/* Image Error Directive */</script>
+
+  <!-- Unit Tests -->
+    <script src="spec/AppBaseSpec.js"></script>
+    <script src="spec/CartSpec.js"></script>
+    <script src="spec/PdpSpec.js"></script>
+    <script src="spec/OrdersSpec.js"></script>
+    <script src="spec/ProfileSpec.js"></script>
+    <script src="spec/SearchSpec.js"></script>
+    <script src="spec/WishlistSpec.js"></script>
+    
+  
+</head>
+
+<body>
+    <!-- This Space Intentionally Left Blank -->
+</body>
+</html>

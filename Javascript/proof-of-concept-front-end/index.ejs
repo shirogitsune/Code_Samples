@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" ng-app="singlepage">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title ng-bind="title"></title>
+        <!-- Bootstrap -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/default.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <header>
+    <nav class="navbar navbar-default">
+        <img src="assets/img/logo.jpg" height="auto" width="55px" style="float:left;margin:0 5px;" />
+        <ul class="nav navbar-nav">
+            <li class="nav-item"><a href="#/" id="nav_link_home">Home</a></li>
+            <li class="nav-item"><a href="#/cart" id="nav_link_cart">Cart</a></li>
+            <li class="nav-item"><a href="#/orders" id="nav_link_orders">My Orders</a></li>
+            <li class="nav-item"><a href="#/wishlists" id="nav_link_wishlists">My Wishlists</a></li>
+            <li class="nav-item"><a href="#/profile" id="nav_link_profile">My Profile</a></li>
+            <% if (userId === '') { %>
+                <li class="nav-item"><a href="#/login" id="nav_link_login">Login</a></li>
+            <% } else { %>
+                <li class="nav-item"><a href="/logout" id="nav_link_logout">Logout</a></li>
+            <% } %>
+        </ul>
+        <div class="navbar-form">
+            <form search-form>
+                <input type="text" id="keyword" name="keyword" placeholder="What are you searching for?" class="form-control" />
+                <button type="submit" class="btn btn-primary" id="search_button">Search</button>
+            </form>
+        </div>
+    </nav>
+    </header>
+        <div id="user-info" style="display: none; visibility: hidden;">
+            <!-- User information that would normally come from some authentication mechanism. -->
+            <!-- <input type="hidden" id="userEmail" value="sample@footlocker.com" />
+            <input type="hidden" id="userId" value="23a8dec6-cef1-49c8-9930-86d5d3488991" /> -->
+            <input type="hidden" id="userEmail" value="<%= userEmail %>" />
+            <input type="hidden" id="userId" value="<%= userId %>" />
+            
+        </div>
+        <div ng-view>
+            <!-- This space intentionally left blank -->
+        </div>
+        <!-- Angular -->
+        <script type="text/javascript" src="assets/js/angular.min.js">/* Angular */</script>
+        <script type="text/javascript" src="assets/js/angular-route.min.js">/* Angular Route Provider */</script>
+        <!-- Application Main / Config -->
+        <script type="text/javascript" src="app/app.js">/* Application */</script>
+        <script type="text/javascript" src="/endpoints">/* Application Endpoints */</script>
+        <!-- Controllers -->
+        <script type="text/javascript" src="app/components/search/search.js">/* Search Controller */</script>
+        <script type="text/javascript" src="app/components/pdp/pdp.js">/* PDP Controller */</script>
+        <script type="text/javascript" src="app/components/cart/cart.js">/* Cart Controller */</script>
+        <script type="text/javascript" src="app/components/orders/orders.js">/* Order Controller */</script>
+        <script type="text/javascript" src="app/components/wishlist/wishlist.js">/* Wishlist Controller */</script>
+        <script type="text/javascript" src="app/components/profile/profile.js">/* Profile Controller */</script>
+        <!-- <script type="text/javascript" src="app/components/login/login.js">/* Login Controller */</script> -->
+        <!-- Directives -->
+        <script type="text/javascript" src="app/shared/directives/errsrc.js">/* Image Error Directive */</script>
+        <script type="text/javascript" src="app/shared/directives/searchform.js">/* Search Form Directive */</script>
+    </body>
+</html>

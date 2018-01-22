@@ -1,0 +1,42 @@
+<div>
+    <section>
+        <div class="navbar-form">
+            <form>
+                <input type="text" id="wishlistName" name="wishlistname" placeholder="Wishlist Name" class="form-control" />
+                <button type="submit" class="btn btn-primary" ng-click="createWishlist();">Create</button>
+            </form>
+        </div>
+    </section>
+    <section ng-init="getWishLists();">
+        <h2>My Wishlists</h2>
+        <ul class="wishlists">
+           <li class="first">
+               <span class="wishlist_name">
+                    Wishlist Name
+                </span>
+                <span class="item_count">
+                    Items
+                </span>
+                <span class="date_created">
+                    Created On
+                </span>
+           </li>
+           <li ng-repeat="wishlist in wishlists" id="wishlists_list_{{$index}}">
+                <span class="wishlist_name">
+                    <a href="#/wishlist/{{wishlist.wishlist_id}}/{{wishlist.name.trim() | urlencode}}" id="wishlist_link_{{$index}}">
+                        {{wishlist.name.trim()}}
+                    </a>
+                </span>
+                <span class="item_count">
+                    {{wishlist.item_count}}
+                </span>
+                <span class="date_created">
+                    {{wishlist.creation_date|date}}
+                </span>
+           </li>
+           <li ng-hide="wishlists.length">
+               <div>No wishlists to display.</div>
+           </li>
+        </ul>
+    </section>
+</div>

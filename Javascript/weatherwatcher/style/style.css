@@ -1,0 +1,45 @@
+.WeatherWatcher {
+    min-width: 520px;
+}
+.WeatherWatcher .heading {
+    display: flex;
+    margin: 5px 0;
+}
+.WeatherWatcher .heading img {
+    height: 55px;
+    margin: 0 30px 0 5px;
+}
+.SearchBar {
+    margin: 5px;
+}
+.SearchBar .input-group{
+    display: flex;
+    
+}
+.SearchBar select{
+    flex-shrink:3;
+    width: 140px;
+}
+.ForecastList {
+    margin: 5px;
+    padding: 0, 3px;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+}
+.ForecastList svg{
+    height: 150px;
+}
+.ForecastList .table td, .ForecastList .table th {
+    vertical-align: middle;
+    text-align: center;
+}
+.ForecastList .table thead th{
+    border-top: 0;
+}
+.ForecastList .table {
+    border-bottom: 2px solid #ECEEEF;
+}
+td:first-of-type, td:first-of-type > div {
+    height: 250px;
+    width: 250px;
+}

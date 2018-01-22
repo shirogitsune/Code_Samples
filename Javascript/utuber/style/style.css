@@ -1,0 +1,59 @@
+.UTuber .logo{
+    height: 65px;
+    float: left;
+}
+.container{
+    margin: auto;
+    min-width: 512px;
+}
+.TuberSearch {
+    display: flex;
+    align-content: center;
+    padding: 5px 0;
+}
+.TuberSearch .SearchBar.form-control{
+    margin: 5px 15px 5px 0;
+    width: 100%;
+    min-width: 300px;
+}
+.TuberSearch .btn{
+    float: right;
+}
+.TuberList{
+    list-style: none;
+    width: 100%;
+    min-width: 200px;
+}
+.Tuber {
+    display: flex;
+    font-size: 12px;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 2px 0px;
+    cursor: pointer;
+    min-width: 300px;
+}
+.Tuber span{
+    margin: 3px;
+}
+.video-detail {
+    margin: 0 3px;
+    border: 1px solid #C0C0C0;
+    border-radius: 3px;
+    padding-top: 5px;
+}
+.video-detail .details .title{
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.video-detail .details .description{
+    font-size: 12px;
+}
+@media screen and (min-width:800px) {
+    .TuberList{
+        width: 32%;
+        float:right;
+    }
+}

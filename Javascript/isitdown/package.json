@@ -1,0 +1,27 @@
+{
+  "name": "hat2017-team3",
+  "owner": "FootLocker.com",
+  "author": "Justin Pearce <jpearce@footlocker.com>",
+  "version": "1.0.0",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "jasmine",
+    "start": "node index.js"
+  },
+  "main": "index.js",
+  "description": "This project is an entry in the February 2017 Hackathon",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "request": "^2.79.0"
+  }
+}

@@ -1,0 +1,62 @@
+<div>
+<header>
+</header>
+<section ng-init="doCheckout()">
+    <h1>Checkout</h1>
+    <h2>Items:</h2>
+    <div class="checkout-items" ng-show="currentOrder.items.length">
+        <div class="checkout-item header">
+                <span class="col first"></span>
+                <span class="col">Item</span>
+                <span class="col">Size</span>
+                <span class="col">Quantity</span>
+                <span class="col last">Price</span>
+        </div>
+        <div ng-repeat="item in currentOrder.items" class="checkout-item">
+            <span class="col product_image first"><img ng-src="http://images.footlocker.com/pi/{{item.product_id}}/small" ng-show="item.product_id" 
+             err-src="assets/img/nope.gif"/></span>
+            <span class="col product_name">{{item.productname}}</span>
+            <span class="col product_size">{{item.size}}</span>
+            <span class="col product_quantity">{{item.quantity}}</span>
+            <span class="col product_price">{{item.price|currency}}</span>
+        </div>
+    </div>    
+    <div class="checkout-subtotal"><span>Subtotal:</span> {{currentOrder.subtotal|currency}}</div>
+        <div class="checkout-subtotal"><span>Shipping: {{currentOrder.shipmethod}} :</span> {{currentOrder.shipping|shipping}}</div>
+        <div class="checkout-subtotal"><span>Tax:</span> {{currentOrder.tax|currency}}</div>
+        <div class="checkout-subtotal"><span>Total:</span> {{currentOrder.total|currency}}</div>    
+    <div class="checkout-addresses">
+        <h2>Billing and Shipping Information:</h2>
+        <div class="billing">
+            {{currentOrder.billingaddress.name}} <br />
+            {{currentOrder.billingaddress.line1}} <br />
+            {{currentOrder.billingaddress.line2}} <br ng-show="currentOrder.billingaddress.line2" />
+            {{currentOrder.billingaddress.city}}, 
+            {{currentOrder.billingaddress.state}}  
+            {{currentOrder.billingaddress.zipcode}} <br />
+        </div>
+        <div class="shipping">
+            {{currentOrder.shippingaddress.name}} <br />
+            {{currentOrder.shippingaddress.line1}} <br />
+            {{currentOrder.shippingaddress.line2}} <br ng-show="currentOrder.shippingaddress.line2" />
+            {{currentOrder.shippingaddress.city}}, 
+            {{currentOrder.shippingaddress.state}}  
+            {{currentOrder.shippingaddress.zipcode}} <br />
+        </div>
+    </div>
+    <div class="payment-method">
+        <select ng-model="currentOrder.payment" id="checkout_payment_method">
+            <option value="">-- Select a Payment Method --</option>
+            <option value="visa">Visa</option>
+            <option value="mc">Master Card</option>
+            <option value="amex">American Express</option>
+            <option value="cash">$$ Cash $$</option>
+            <option value="iou">?? I.O.U. ??</option>
+        </select>
+    </div>
+    <div id="order" class="placeorder" ng-show="currentOrder.items.length">
+            <button class="btn btn-primary" ng-click="placeOrder();" id="checkout_submit_order" >Submit Order</button>
+    </div>
+</section>
+<footer></footer>
+</div>

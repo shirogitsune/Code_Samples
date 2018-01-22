@@ -1,0 +1,24 @@
+<div>
+<header>
+</header>
+<section ng-init="getOrders()">
+    <h1>Orders</h1>
+    <div class="order-items">
+        <div class="order-item header">
+                <span class="col first">Order Id</span>
+                <span class="col">Order Date</span>
+                <span class="col">Items</span>
+                <span class="col">Status</span>
+                <span class="col last">Total</span>
+        </div>
+        <div ng-repeat="order in orderslist.orders" class="order-item {{order.order_status.toLowerCase()}}">
+            <span class="col first">{{order.order_id}}</span>
+            <span class="col">{{order.order_date|date}}</span>
+            <span class="col">{{order.item_count}}</span>
+            <span class="col">{{order.order_status}}</span>
+            <span class="col last">{{order.total|currency}}</span>
+        </div>
+    </div>        
+</section>
+<footer></footer>
+</div>

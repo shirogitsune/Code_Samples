@@ -1,0 +1,49 @@
+<div>
+    <section ng-init="getWishlistItems();">
+        <h2 id="wishlist_name">My Wishlist: {{wishlist.name}} </h2>
+        <form>
+            <input type="hidden" id="delete" name="delete" value="{{wishlist.wishlist_id}}" />
+            <button class="btn" type="submit" ng-click="deleteWishlist();" id="wishlist_delete_list">Delete Wishlist</button>
+        </form>
+        <div class="date_created">
+            <strong>Created:</strong> {{wishlist.creation_date|date}}
+        </div>
+        <h3>Items:</h3>
+        <ul ng-show="wishlist.items.length" class="wishlist_items">
+            <li class="first">
+                <span>
+                    Product Name:
+                </span>
+                <span class="wishlist_item_description">
+                    Product Description:
+                </span>
+                <span>
+                    Price:
+                </span>
+                <span>
+                    Quantity:
+                </span>
+                <span>
+                </span>
+            </li>
+            <li ng-repeat="item in wishlist.items" id="wishlist_item_{{$index}}">
+                <span class="wishlist_item_name">
+                    {{item.productname}}
+                </span>
+                <span class="wishlist_item_description">
+                    {{item.productdescription}}
+                </span>
+                <span class="wishlist_item_price">
+                    {{item.price|currency}}
+                </span>
+                <span class="wishlist_item_quantity">
+                    {{item.quantity}}
+                </span>
+                <span>
+                    <a href="javascript:void(0)" ng-click="removeItemFromWishlist(item.linenumber);" id="wishlist_remove_{{$index}}">Remove</a>
+                </span>
+            </li>
+        </ul>
+        <span ng-hide="wishlist.items.length" id="wishlist_empty_message">There are no items in this wishlist</span>
+    </section>
+</div>

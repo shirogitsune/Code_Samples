@@ -1,0 +1,19 @@
+<div>
+<section ng-init="search();">
+    <ul>
+    <li ng-repeat="product in products" class="product thumbnail">
+        <a href="#/product/{{product.productid[0]}}" class="product_link" id="product_{{product.productid[0]}}">
+        <img ng-src="http://images.footlocker.com/pi/{{product.productid[0]}}/small" ng-show="product.productid[0]" 
+        err-src="assets/img/nope.gif"/>
+        <div class="product_name">{{product.name_t[0]}}</div>
+        <div class="product_id">{{product.productid[0]}}</div>
+        <div class="product_price">{{product.listprice[0]|currency}}</div>
+        </a>
+    </li>
+    </ul>
+    <div ng-show="products.length == 0 || products.length === undefined">
+        There are no products found for '{{keyword}}'. Please try searching for something else.
+    </div>
+</section>
+<footer></footer>
+</div>

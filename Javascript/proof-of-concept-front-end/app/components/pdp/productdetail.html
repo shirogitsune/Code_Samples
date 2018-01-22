@@ -1,0 +1,66 @@
+<div>
+<header>
+</header>
+<section ng-init="getProduct();">
+    <h1>Product Detail</h1>
+    <div id="cartSuccess" ng-show="addedMessage!=undefined"><a class="cartlink" href="#/cart" id="cart_added_message">{{ addedMessage }}</a></div>
+    <div id="cartError" ng-show="errMessage!=undefined"></div>
+    <div class="grid_12 product_images">
+        <span class="product_image">
+        <img ng-src="http://images.footlocker.com/pi/{{product.product_id}}/zoom/"  err-src="assets/img/nope.gif" />
+        </span>
+        <span ng-repeat="alternate in product.alternate_colors">
+            <span>
+            <a href="#/product/{{ alternate.product_id }}">
+                <img ng-src="http://images.footlocker.com/pi/{{ alternate.product_id }}/small/"  err-src="assets/img/nope.gif" />
+            </a>
+        </span>
+        </span>
+    </div>
+    <div class="grid_12">
+        <h1>{{product.name}}</h1>
+        <div class="grid_11">
+            <div class="sale grid_11" ng-show="isOnSale(product.saleprice, product.listprice)">
+                <span class="list-price" id="product_list_price">{{product.listprice|currency}}</span>
+                <span class="sale-price" id="product_sale_price">{{product.saleprice|currency}}</span>
+            </div>  
+            <div class="normal grid_11" ng-hide="isOnSale(product.saleprice, product.listprice)">
+                <span class="list-price" id="product_list_price">{{product.listprice|currency}}</span>
+            </div>
+            <div class="grid_11">
+            Product Number: <span id="product_number">{{product.product_id}}</span>
+            </div>
+            <div class="grid_11">{{product.description}}</div>  
+        </div>
+        <span class="errmessage" id="cart_error_message">{{message}}</span>
+        <form id="addToCart">
+        <div class="grid_11">                    
+            <label>Size:</label>
+            <select name="size" class="form-control" id="cart_product_size" ng-model="lineitem.size" ng-change="setMessage('')">
+                <option value="">Please select a size</option>
+                <option value="{{ option.size }}" ng-show="option.available" ng-repeat="option in product.sizes">
+                    {{ option.size }}
+                </option>
+            </select>
+        </div>
+        <div class="grid_11">
+            <label>Quantity:</label><input id="cart_product_quantity" type="number" min="1" max="255" value="1" class="form-control" ng-model="lineitem.quantity" />
+        </div>
+        <div class="grid_11">
+            <button id="add_to_cart_button" type="submit" class="btn btn-primary" ng-click="addToCart()">Add to Cart</button>
+        </div>
+        <div class="grid_11">
+            <a href="javascript:void(0)" ng-click="addToWishList();" id="add_to_wishlists">Add to Wishlist</a>
+            <div ng-show="addtowishlist" ng-controller="WishlistController as wishlist" ng-init="getWishLists();">
+                <select name="wishlist" id="cart_wishlists">
+                    <option>Select a wishlist...</option>
+                    <option value="{{list.wishlist_id}}" ng-repeat="list in wishlists">{{list.name}}</option>
+                </select>
+                <button ng-click="addItemToWishList(lineitem);" id="add_to_wishlist">Add</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</section>
+<footer></footer>
+</div>
